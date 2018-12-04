@@ -1,13 +1,6 @@
 const removeFromArray = function(array, vals) {
     let args = Array.prototype.slice.call(arguments, 1);
-    let i = args.length;
-    while (i > 0) {
-        array = array.filter(function(item) {
-            return item != vals;
-        });
-        args.splice(0, 1);
-        i--;
-    }
+    array = array.filter(item => !args.includes(item));
     return array;
 }
 
