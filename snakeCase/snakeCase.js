@@ -1,16 +1,11 @@
 const snakeCase = function(str) {
-    // preprocess the string
-    // // trim everything outside the first and last words
-    // // set everything toLowerCase
-    // replace the following with underscores:
-    // // anything that is between two words
-    // // camelCases
-    let trim = /\W+$/g;
-    let between = /[^\w+.\w+]/g;
-    str = str.replace(trim, '').toLowerCase();
-    str = str.replace(between, '_');
-    console.log(str);
-
+    let trim = /[^A-Z]/gmi;
+    let trailing = /_{2,}$/gmi;
+    let multiples = /_{2,}/gmi;
+    str = str.replace(trim, '_').toLowerCase();
+    str = str.replace(trailing, '');
+    str = str.replace(multiples, '_');
+    return str;
 }
 
 module.exports = snakeCase
