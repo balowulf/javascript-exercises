@@ -10,25 +10,32 @@ function subtract (x, y) {
 	}
 }
 
-function sum () {
-	
-}
-
-function multiply (nums) {
-	let total;
-	for (let i = nums[0]; i < nums.length;) {
-		total = i * nums[1];
-		nums.splice(i, 1);
+function sum (nums) {
+	let total = 0;
+	for (let i = 0; i < nums.length; i++) {
+		total = total + nums[i];
 	}
 	return total;
 }
 
-function power() {
-	
+function multiply (nums) {
+	let total = 1;
+	for (let i = 0; i < nums.length; i++) {
+		total = total * nums[i];
+	}
+	return total;
 }
 
-function factorial() {
-	
+function power(num, power) {
+	let total = num;
+	for (let i = power; i > 1; i--) {
+		total *= num;
+	}
+	return total;
+}
+
+function factorial(num) {
+
 }
 
 module.exports = {

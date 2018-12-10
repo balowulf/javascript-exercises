@@ -21,19 +21,19 @@ describe('subtract', function() {
 });
 
 describe('sum', function() {
-	xit('computes the sum of an empty array', function() {
+	it('computes the sum of an empty array', function() {
 		expect(calculator.sum([])).toEqual(0);
 	});
 
-	xit('computes the sum of an array of one number', function() {
+	it('computes the sum of an array of one number', function() {
 		expect(calculator.sum([7])).toEqual(7);
 	});
 
-	xit('computes the sum of an array of two numbers', function() {
+	it('computes the sum of an array of two numbers', function() {
 		expect(calculator.sum([7,11])).toEqual(18);
 	});
 
-	xit('computes the sum of an array of many numbers', function() {
+	it('computes the sum of an array of many numbers', function() {
 		expect(calculator.sum([1,3,5,7,9])).toEqual(25);
 	});
 });
@@ -49,7 +49,7 @@ describe('multiply', function() {
 });
 
 describe('power', function() {
-	xit('raises one number to the power of another number', function() {
+	it('raises one number to the power of another number', function() {
 		expect(calculator.power(4,3)).toEqual(64); // 4 to third power is 64
 	});
 });
@@ -67,7 +67,7 @@ describe('factorial', function() {
 		expect(calculator.factorial(2)).toEqual(2);
 	});
 
-	xit('computes the factorial of 5', function() {
+	it('computes the factorial of 5', function() {
 		expect(calculator.factorial(5)).toEqual(120);
 	});
 
