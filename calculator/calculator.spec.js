@@ -5,17 +5,17 @@ describe('add', function() {
 		expect(calculator.add(0,0)).toEqual(0);
 	});
 
-	xit('adds 2 and 2', function() {
+	it('adds 2 and 2', function() {
 		expect(calculator.add(2,2)).toEqual(4);
 	});
 
-	xit('adds positive numbers', function() {
+	it('adds positive numbers', function() {
 		expect(calculator.add(2,6)).toEqual(8);
 	});
 });
 
 describe('subtract', function() {
-	xit('subtracts numbers', function() {
+	it('subtracts numbers', function() {
 		expect(calculator.subtract(10,4)).toEqual(6);
 	});
 });
@@ -39,11 +39,11 @@ describe('sum', function() {
 });
 
 describe('multiply', function() {
-	xit('multiplies two numbers', function() {
+	it('multiplies two numbers', function() {
 		expect(calculator.multiply([2,4])).toEqual(8);
 	});
 
-	xit('multiplies several numbers', function() {
+	it('multiplies several numbers', function() {
 		expect(calculator.multiply([2,4,6,8,10,12,14])).toEqual(645120);
 	});
 });
