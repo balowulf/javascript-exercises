@@ -35,7 +35,16 @@ function power(num, power) {
 }
 
 function factorial(num) {
-
+	array = [];
+	while (num > 0) {
+		array.push(num);
+		num--;
+	}
+	let total = 1;
+	for (let i = 0; i < array.length; i++) {
+		total = total * array[i];
+	}
+	return total;
 }
 
 module.exports = {
