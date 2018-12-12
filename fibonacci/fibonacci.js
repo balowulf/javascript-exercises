@@ -1,11 +1,13 @@
 const fibonacci = (n) => {
-    if (n < 0) {
-        return 'OOPS';
+    if (n < 0) return "OOPS";
+    let a = 0;
+    let b = 1;
+    for (let i = 1; i < n; i++) {
+        const temp = b;
+        b = a + b;
+        a = temp;
     }
-    if (n == 0 || n == 1) {
-        return n;
-    }
-    return fibonacci(n - 1) + fibonacci(n - 2);
-}
+    return b;
+};
 
 module.exports = fibonacci
